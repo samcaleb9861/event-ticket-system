@@ -12,6 +12,7 @@ exports.createEvent = catchAsync(async (req, res, next) => {
     date,
     location,
     totalTickets,
+    availableTickets: totalTickets,
     metadata: metadata || {},
     createdBy: req.user.id
   });

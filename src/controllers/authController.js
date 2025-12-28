@@ -92,12 +92,3 @@ exports.login = catchAsync(async (req, res, next) => {
   // 5. Send token
   createSendToken(user, 200, res);
 });
-
-exports.getMe = catchAsync(async (req, res, next) => {
-  res.status(200).json({
-    status: 'success',
-    data: {
-      user: req.user
-    }
-  });
-});
